@@ -26,7 +26,7 @@ This is relevant because message-passing GNNs represent the features of the node
 This calculation can be modified further to instead return the analagous stable dsitribution of the edge transition probability matrix in a process outlined in the paper linked above.
 
 ### **Fully-Connected (FC) Layer Comparison:**
-This metric is not as rigorously defined as the previous one. We simply add a FC layer to the end of the model and see how that affects performance over multiple runs. The FC layer can also replace an existing final layer in the analysis. Making this change explores how ignoring the graph structure of the data (or rather, how turning the graph into a complete graph) can be used to uncover longer-range dependencies between the nodes. If performance improves when the FC layer is added, it may indicate what GNN models work best with the dataset.
+This metric is not as rigorously defined as the previous one. We simply add a FC layer to the end of the model and see how that affects performance over multiple runs. The FC layer can also replace an existing final layer in the analysis. Making this change explores how ignoring the graph structure of the data (or rather, how turning the graph into a complete graph) can be used to uncover longer-range dependencies between the nodes. If performance improves when the FC layer is added, it may indicate which GNN models work best with the dataset.
 
 This experiment can also be run multiple times using different GNN models for the pre-FC layers to compare which ones bring out the most striking difference in performance between the base and FC-augmented models.
 
